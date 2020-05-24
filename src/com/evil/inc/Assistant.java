@@ -18,7 +18,7 @@ import static com.evil.inc.Phase.GREEN;
 import static com.evil.inc.Phase.RED;
 import static com.evil.inc.Phase.REFACTOR;
 
-public class Assistant implements ToolWindowFactory {
+public class Assistant {
     private final Map<Phase, String> cycleLaws = new HashMap<Phase, String>() {{
         put(RED, "Create a unit tests that fails.");
         put(GREEN, "Write production code that makes that test pass.");
@@ -40,8 +40,6 @@ public class Assistant implements ToolWindowFactory {
     private JTextPane a2YouAreNotTextPane;
     private JTextPane a3YouAreNotTextPane;
     private Phase currentPhase;
-    private ToolWindow toolWindow;
-
 
     public Assistant() {
         setPhase(RED);
@@ -71,12 +69,7 @@ public class Assistant implements ToolWindowFactory {
         currentPhase = phase;
     }
 
-    @Override
-    public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
-        Content content = contentFactory.createContent(windowPanel, "", false);
-        toolWindow.getContentManager().addContent(content);
-        toolWindow.setType(ToolWindowType.FLOATING, () -> {});
-        this.toolWindow = toolWindow;
+    public JPanel getWindowPanel(){
+        return windowPanel;
     }
 }

@@ -23,7 +23,7 @@
                     secondary="true"
                     icon="/general/add.png"
                     anchor="right"
-                    factoryClass="com.evil.inc.Assistant"
+                    factoryClass="com.evil.inc.AssistantToolWindowFactory"
         />
     </extensions>
 
