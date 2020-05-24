@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.your.company.unique.plugin.id</id>
+    <id>com.evil.inc</id>
     <name>TDD Assistant</name>
     <version>1.0</version>
     <vendor email="jhoonnyc@gmail.com" url="">Evil Inc.</vendor>
