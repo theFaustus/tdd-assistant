@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>com.your.company.unique.plugin.id</id>
+    <name>TDD Assistant</name>
+    <version>1.0</version>
+    <vendor email="jhoonnyc@gmail.com" url="">Evil Inc.</vendor>
+
+    <description><![CDATA[
+      Simple plugin to assist with Red-Green-Refactor cycle during TDD.<br>
+    ]]></description>
+
+    <change-notes>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="TDD Assistant"
+                    secondary="true"
+                    icon="/general/add.png"
+                    anchor="right"
+                    factoryClass="com.evil.inc.Assistant"
+        />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
