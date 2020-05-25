@@ -36,9 +36,9 @@ public class Assistant {
     private JLabel cyclePhaseTextLabel;
     private JLabel cyclePhaseLabel;
     private JPanel windowPanel;
-    private JTextPane a1YouAreNotTextPane;
-    private JTextPane a2YouAreNotTextPane;
-    private JTextPane a3YouAreNotTextPane;
+    private JTextPane firstLaw;
+    private JTextPane secondLaw;
+    private JTextPane thirdLaw;
     private Phase currentPhase;
 
     public Assistant() {
