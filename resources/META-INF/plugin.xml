@@ -1,15 +1,18 @@
 <idea-plugin>
     <id>com.evil.inc</id>
     <name>TDD Assistant</name>
-    <version>1.1</version>
+    <version>1.2</version>
     <vendor email="jhoonnyc@gmail.com" url="">Evil Inc.</vendor>
 
     <description><![CDATA[
       Simple plugin to assist with Red-Green-Refactor cycle during TDD.<br>
     ]]></description>
 
-    <change-notes>
-    </change-notes>
+    <change-notes><![CDATA[
+    - Version 1.2 :
+        * Implemented the hide laws and image feature via a context menu
+        * Added an assisting color changing border based on the current phase
+    ]]></change-notes>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>
