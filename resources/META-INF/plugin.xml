@@ -1,17 +1,15 @@
 <idea-plugin>
     <id>com.evil.inc</id>
     <name>TDD Assistant</name>
-    <version>1.2</version>
+    <version>1.3</version>
     <vendor email="jhoonnyc@gmail.com" url="">Evil Inc.</vendor>
 
     <description><![CDATA[
-      Simple plugin to assist with Red-Green-Refactor cycle during TDD.<br>
+      Simple plugin to assist with Red-Green-Refactor cycle during TDD. Use CTRL+SHIFT+ALT+RIGHT for the next phase or the context menu from Tools. Use RIGHT-CLICK for the context menu.<br>
     ]]></description>
 
     <change-notes><![CDATA[
-    - Version 1.2 :
-        * Implemented the hide laws and image feature via a context menu
-        * Added an assisting color changing border based on the current phase
+    - Version 1.3 : Implement a shortcut action (CTRL+SHIFT+ALT+RIGHT) for the next phase
     ]]></change-notes>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
@@ -31,7 +29,17 @@
     </extensions>
 
     <actions>
+        <group id="tdd-assistant" text="TDD Assistant" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="com.evil.inc.NextPhaseAction" class="com.evil.inc.NextPhaseAction" text="Next Phase"
+                    description="Moves you to next rgr cycle phase">
+                <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt RIGHT"/>
+
+                <add-to-group group-id="tdd-assistant" anchor="first"/>
+            </action>
+        </group>
         <!-- Add your actions here -->
+
     </actions>
 
 </idea-plugin>
