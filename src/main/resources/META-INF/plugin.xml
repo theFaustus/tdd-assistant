@@ -1,0 +1,44 @@
+<idea-plugin>
+    <id>com.evil.inc</id>
+    <name>TDD Assistant</name>
+    <version>1.4.1</version>
+    <vendor email="jhoonnyc@gmail.com" url="">Evil Inc.</vendor>
+
+    <description><![CDATA[
+      Simple plugin to assist with Red-Green-Refactor cycle during TDD. Use CTRL+ALT+RIGHT for the next phase or the context menu from Tools. Use RIGHT-CLICK for the context menu.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    - Version 1.4.1 : Fix cannot add an action twice
+    - Version 1.4 : Migrate from DevKit to the gradle build system, add logo
+    ]]></change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="TDD Assistant"
+                    secondary="true"
+                    icon="/general/externalTools.svg"
+                    anchor="right"
+                    factoryClass="com.evil.inc.tddassistant.AssistantToolWindowFactory"
+        />
+    </extensions>
+
+    <actions>
+        <group id="tdd-assistant" text="TDD Assistant" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="com.evil.inc.tddassistant.NextPhaseAction" class="com.evil.inc.tddassistant.NextPhaseAction" text="Next TDD Phase"
+                    description="Moves you to next rgr cycle phase">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt RIGHT"/>
+            </action>
+        </group>
+        <!-- Add your actions here -->
+
+    </actions>
+
+</idea-plugin>
