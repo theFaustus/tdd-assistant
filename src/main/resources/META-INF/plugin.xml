@@ -9,6 +9,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
+    - Version 1.5.0 : Migrate to 2025 platform & implement auto-resize on hide image/laws
     - Version 1.4.1 : Fix cannot add an action twice
     - Version 1.4 : Migrate from DevKit to the gradle build system, add logo
     ]]></change-notes>
@@ -23,7 +24,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="TDD Assistant"
                     secondary="true"
-                    icon="/general/externalTools.svg"
+                    icon="/general/externalTools_dark.svg"
                     anchor="right"
                     factoryClass="com.evil.inc.tddassistant.AssistantToolWindowFactory"
         />

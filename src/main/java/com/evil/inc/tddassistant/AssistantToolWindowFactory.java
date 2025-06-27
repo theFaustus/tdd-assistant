@@ -14,7 +14,7 @@ public class AssistantToolWindowFactory implements ToolWindowFactory {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
+        ContentFactory contentFactory = ContentFactory.getInstance();
         Assistant assistant = Assistant.INSTANCE;
         JPanel windowPanel = assistant.getWindowPanel();
         Content content = contentFactory.createContent(windowPanel, "", false);

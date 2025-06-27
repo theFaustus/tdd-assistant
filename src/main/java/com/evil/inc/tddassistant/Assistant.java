@@ -64,15 +64,9 @@ public enum Assistant {
 
     public void nextPhase() {
         switch (currentPhase) {
-            case RED:
-                setPhase(GREEN);
-                break;
-            case GREEN:
-                setPhase(REFACTOR);
-                break;
-            case REFACTOR:
-                setPhase(RED);
-                break;
+            case RED -> setPhase(GREEN);
+            case GREEN -> setPhase(REFACTOR);
+            case REFACTOR -> setPhase(RED);
         }
     }
 
